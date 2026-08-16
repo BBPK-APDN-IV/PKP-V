@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Kehadiran - PORTAL PELATIHAN PKP</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'dark-teal': '#2b6777', 'dark-teal-light': '#3d8a9c', 'dark-teal-dark': '#1e4a56' },
+                    fontFamily: { 'poppins': ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body { height: 100%; margin: 0; }
+        body { font-family: 'Poppins', sans-serif; box-sizing: border-box; background-color: #f3f4f6; }
+        .geometric-pattern { background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 20px 20px; }
+        
+        .dot-pattern-bg {
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            background-position: -8px -8px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col">
+
+	<nav class="bg-dark-teal text-white py-3 px-4 md:px-8 shrink-0 relative z-20 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-dark-teal text-lg"></i>
+                </div>
+                <span class="font-semibold text-sm md:text-base">PORTAL PELATIHAN PKP</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 md:space-x-6">
+                
+                <a href="https://bbpk-apdn-iv.github.io/portal-pengaduan-informasi/index.html" target="_blank" class="flex items-center space-x-1.5 text-yellow-300 hover:text-yellow-100 transition-colors font-medium"> 
+                    <i class="fas fa-headset"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Pengaduan Fasilitas</span>
+                </a>
+                
+				<div class="w-px h-5 bg-white/30 shrink-0"></div>
+				
+				<a href="https://heyzine.com/flip-book/5804fc5894.html#page/11" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-map-marked-alt"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Denah Gedung</span>
+                </a>
+				
+                <div class="w-px h-5 bg-white/30"></div>
+
+                <a href="https://ppsdmregmakassar.kemendagri.go.id/" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-globe"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">WEB Utama</span> 
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-gradient-to-br from-dark-teal via-dark-teal to-dark-teal-light pt-10 pb-28 shrink-0 overflow-hidden">
+        <div class="absolute inset-0 geometric-pattern opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <nav class="flex text-sm text-cyan-100 mb-6">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-white transition-colors"><i class="fas fa-home mr-2 text-xs"></i>Beranda</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fas fa-chevron-right text-xs text-cyan-300/50 mx-2"></i>
+                            <span class="text-white font-medium">Absensi Kehadiran</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fas fa-user-check text-cyan-300"></i> Form Absensi Harian
+                    </h1>
+                    <p class="text-cyan-50 max-w-2xl text-sm md:text-base opacity-90">Lengkapi data diri dan tanda tangan Anda sebagai bukti kehadiran kegiatan pelatihan.</p>
+                </div>
+                
+                <div class="flex flex-row gap-3 mt-4 md:mt-0">
+                    <a href="rekap.html" class="inline-flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-xl transition-all shadow-md text-sm font-medium w-full md:w-auto">
+                        <i class="fas fa-table"></i><span>Lihat Rekap</span>
+                    </a>
+                    <a href="index.html" class="inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-2.5 rounded-xl transition-all backdrop-blur-md text-sm font-medium w-full md:w-auto">
+                        <i class="fas fa-arrow-left"></i><span>Kembali</span>
+                    </a>
+                </div>
+                </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-3xl mx-auto w-full px-4 -mt-16 relative z-20 pb-12">
+        <div class="bg-white rounded-2xl shadow-[0_20px_50px_rgba(43,103,119,0.15)] border border-gray-100 p-6 md:p-8">
+            
+            <div id="success-alert" class="hidden mb-6 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg flex items-center gap-3">
+                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                <div>
+                    <p class="font-bold text-sm">Absensi Berhasil!</p>
+                    <p class="text-xs">Data Anda telah terekam ke dalam sistem.</p>
+                </div>
+            </div>
+
+            <form id="form-absensi" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap Peserta</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <select name="nama" id="nama-dropdown" required class="w-full pl-10 pr-8 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dark-teal focus:border-dark-teal outline-none transition-all appearance-none bg-white">
+                                <option value="" disabled selected>Memuat daftar nama...</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <i id="nama-icon" class="fas fa-spinner fa-spin text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tanggal Pelatihan</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-calendar-alt text-gray-400"></i>
+                            </div>
+                            <input type="date" name="tanggal" required class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dark-teal focus:border-dark-teal outline-none transition-all text-gray-700">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Angkatan</label>
+                        <div class="relative mb-2">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-users text-gray-400"></i>
+                            </div>
+                            <select id="angkatan-dropdown" name="angkatan_dropdown" required class="w-full pl-10 pr-8 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dark-teal focus:border-dark-teal outline-none transition-all appearance-none bg-white">
+                                <option value="" disabled selected>Pilih Angkatan...</option>
+                                <option value="I">Angkatan I</option>
+                                <option value="II">Angkatan II</option>
+                                <option value="III">Angkatan III</option>
+                                <option value="IV">Angkatan IV</option>
+                                <option value="V">Angkatan V</option>
+                                <option value="Lainnya">Lainnya (Ketik Manual)...</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                        <input type="text" id="angkatan-manual" name="angkatan_manual" placeholder="Ketik angkatan di sini..." class="hidden w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dark-teal focus:border-dark-teal outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Kelompok</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-layer-group text-gray-400"></i>
+                            </div>
+                            <select name="kelompok" class="w-full pl-10 pr-8 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-dark-teal focus:border-dark-teal outline-none transition-all appearance-none bg-white">
+                                <option value="" disabled selected>Pilih Kelompok...</option>
+                                <option value="1">Kelompok 1</option>
+                                <option value="2">Kelompok 2</option>
+                                <option value="3">Kelompok 3</option>
+                                <option value="4">Kelompok 4</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-base font-medium text-gray-800 mb-3">Tanda Tangan Digital</label>
+                    
+                    <div class="border-2 border-dashed border-gray-300 rounded-xl overflow-hidden bg-white">
+                        <div class="relative w-full h-48 dot-pattern-bg" id="signature-wrapper">
+                            <canvas id="signature-pad" class="absolute inset-0 w-full h-full cursor-crosshair"></canvas>
+                        </div>
+                        <div class="border-t border-gray-300">
+                            <button type="button" id="clear-signature" class="w-full py-3 text-red-500 font-medium hover:bg-red-50 transition-colors text-sm">
+                                Hapus & Ulangi Tanda Tangan
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2 italic font-light">
+                        Gunakan mouse atau jari (pada layar sentuh) untuk tanda tangan di area di atas.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-gray-100">
+                    <button type="submit" id="btn-submit" class="w-full bg-dark-teal hover:bg-dark-teal-light text-white font-bold py-3.5 px-4 rounded-xl transition-all duration-300 shadow-lg shadow-dark-teal/30 flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Kirim Absensi
+                    </button>
+                    <button type="button" id="btn-loading" class="hidden w-full bg-gray-400 text-white font-bold py-3.5 px-4 rounded-xl cursor-not-allowed flex items-center justify-center gap-2">
+                        <i class="fas fa-spinner fa-spin"></i> Memproses...
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-6 shrink-0 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500 font-medium">Copyright © 2026 Kementerian Dalam Negeri | BBPK-APDN-IV Makassar</p>
+			<p class="text-sm text-gray-500 font-medium">Created by Nafiqa Harseno Wibowo</p>
+        </div>
+    </footer>
+
+    <script>
+        // MASUKKAN WEB APP URL GOOGLE APPS SCRIPT ANDA DI SINI
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwFMH6YXzGKGyRfEj9ia-dmh37HEdTwEbgurtCdVs8oph-hujyl43mZvij9hKQap25e/exec';
+        
+        const form = document.getElementById('form-absensi');
+        const btnSubmit = document.getElementById('btn-submit');
+        const btnLoading = document.getElementById('btn-loading');
+        const successAlert = document.getElementById('success-alert');
+
+        const angkatanDropdown = document.getElementById('angkatan-dropdown');
+        const angkatanManual = document.getElementById('angkatan-manual');
+
+        angkatanDropdown.addEventListener('change', function() {
+            if (this.value === 'Lainnya') {
+                angkatanManual.classList.remove('hidden');
+                angkatanManual.required = true;
+            } else {
+                angkatanManual.classList.add('hidden');
+                angkatanManual.required = false;
+                angkatanManual.value = '';
+            }
+        });
+
+        fetch(scriptURL + '?action=getNames')
+            .then(response => response.json())
+            .then(data => {
+                const select = document.getElementById('nama-dropdown');
+                const icon = document.getElementById('nama-icon');
+                
+                select.innerHTML = '<option value="" disabled selected>Pilih Nama Anda...</option>';
+                
+                if(data.length > 0 && data[0] !== "Error: Buat sheet bernama 'Peserta'") {
+                    data.forEach(nama => {
+                        const opt = document.createElement('option');
+                        opt.value = nama;
+                        opt.textContent = nama;
+                        select.appendChild(opt);
+                    });
+                } else {
+                    select.innerHTML = '<option value="" disabled>Data nama kosong / Sheet tidak ada</option>';
+                }
+                
+                icon.classList.remove('fa-spinner', 'fa-spin');
+                icon.classList.add('fa-chevron-down');
+            })
+            .catch(error => {
+                console.error('Error fetching names:', error);
+                document.getElementById('nama-dropdown').innerHTML = '<option value="" disabled>Gagal memuat daftar nama</option>';
+                document.getElementById('nama-icon').classList.remove('fa-spinner', 'fa-spin');
+                document.getElementById('nama-icon').classList.add('fa-exclamation-circle', 'text-red-500');
+            });
+
+        const canvas = document.getElementById('signature-pad');
+        const signaturePad = new SignaturePad(canvas, {
+            penColor: 'rgb(30, 74, 86)',
+            backgroundColor: 'rgba(255, 255, 255, 0)' 
+        });
+
+        function resizeCanvas() {
+            const ratio =  Math.max(window.devicePixelRatio || 1, 1);
+            const wrapper = document.getElementById('signature-wrapper');
+            canvas.width = wrapper.offsetWidth * ratio;
+            canvas.height = wrapper.offsetHeight * ratio;
+            canvas.getContext("2d").scale(ratio, ratio);
+            signaturePad.clear();
+        }
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+
+        document.getElementById('clear-signature').addEventListener('click', function () {
+            signaturePad.clear();
+        });
+
+        document.querySelector('input[type="date"]').valueAsDate = new Date();
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            if (signaturePad.isEmpty()) {
+                alert("Mohon isi tanda tangan Anda terlebih dahulu.");
+                return;
+            }
+
+            btnSubmit.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+
+            const dataURI = signaturePad.toDataURL(); 
+            const formData = new FormData(form);
+            
+            formData.append('ttd', dataURI);
+
+			// 👇 DITAMBAHKAN: Cek jika kelompok tidak dipilih, maka isi dengan strip (-)
+            if (!formData.has('kelompok')) {
+                formData.append('kelompok', '-'); 
+            }
+
+            const pilihanAngkatan = angkatanDropdown.value;
+            if (pilihanAngkatan === 'Lainnya') {
+                formData.set('angkatan', angkatanManual.value);
+            } else {
+                formData.set('angkatan', pilihanAngkatan);
+            }
+            
+            formData.delete('angkatan_dropdown');
+            formData.delete('angkatan_manual');
+
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    successAlert.classList.remove('hidden');
+                    form.reset();
+                    signaturePad.clear();
+                    
+                    angkatanManual.classList.add('hidden');
+                    angkatanManual.required = false;
+
+                    document.querySelector('input[type="date"]').valueAsDate = new Date();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    btnLoading.classList.add('hidden');
+                    btnSubmit.classList.remove('hidden');
+                    setTimeout(() => { successAlert.classList.add('hidden'); }, 5000);
+                })
+                .catch(error => {
+                    alert("Terjadi kesalahan saat mengirim data. Silakan coba lagi.");
+                    btnLoading.classList.add('hidden');
+                    btnSubmit.classList.remove('hidden');
+                });
+        });
+    </script>
+</body>
+</html>

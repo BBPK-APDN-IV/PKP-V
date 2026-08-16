@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Tim & Kontak - Portal PELATIHAN PKP</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'dark-teal': '#2b6777', 'dark-teal-light': '#3d8a9c', 'dark-teal-dark': '#1e4a56' },
+                    fontFamily: { 'poppins': ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body { height: 100%; margin: 0; }
+        body { font-family: 'Poppins', sans-serif; box-sizing: border-box; background-color: #f3f4f6; }
+        .geometric-pattern { background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="h-full flex flex-col">
+
+    <nav class="bg-dark-teal text-white py-3 px-4 md:px-8 shrink-0 relative z-20 shadow-md">
+        <div class="w-full flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0">
+                    <i class="fas fa-graduation-cap text-dark-teal text-lg"></i>
+                </div>
+                <span class="font-semibold text-sm md:text-base whitespace-nowrap">PORTAL PELATIHAN PKP</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <a href="https://bbpk-apdn-iv.github.io/portal-pengaduan-informasi/index.html" target="_blank" class="flex items-center space-x-1.5 text-yellow-300 hover:text-yellow-100 transition-colors font-medium"> 
+                    <i class="fas fa-headset"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Pengaduan Fasilitas</span>
+                </a>
+                
+                <div class="w-px h-5 bg-white/30 shrink-0"></div>
+                
+                <a href="https://heyzine.com/flip-book/5804fc5894.html#page/11" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-map-marked-alt"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Denah Gedung</span>
+                </a>
+                
+                <div class="w-px h-5 bg-white/30"></div>
+
+                <a href="https://ppsdmregmakassar.kemendagri.go.id/" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-globe"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">WEB Utama</span> 
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-gradient-to-br from-dark-teal via-dark-teal to-dark-teal-light pt-10 pb-28 shrink-0 overflow-hidden">
+        <div class="absolute inset-0 geometric-pattern opacity-30"></div>
+        <div class="absolute right-0 top-0 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        
+        <div class="w-full px-4 md:px-8 relative z-10">
+            <nav class="flex text-sm text-cyan-100 mb-6">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-white transition-colors"><i class="fas fa-home mr-2 text-xs"></i> Beranda</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fas fa-chevron-right text-xs text-cyan-300/50 mx-2"></i>
+                            <span class="text-white font-medium">Profil Tim & Kontak</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fas fa-users text-cyan-300"></i> Tim Panitia Penyelenggara & Widyaiswara
+                    </h1>
+                    <p class="text-cyan-50 max-w-2xl text-sm md:text-base opacity-90">
+                        Kenali lebih dekat Widyaiswara Anda dan temukan layanan kontak panitia yang siap mendampingi kelancaran pelatihan PKP Anda.
+                    </p>
+                </div>
+                <a href="index.html" class="inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-2.5 rounded-xl transition-all backdrop-blur-md text-sm font-medium w-fit">
+                    <i class="fas fa-arrow-left"></i><span>Kembali</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 -mt-16 relative z-20 pb-12 flex flex-col gap-8">
+        
+        <!-- BAGIAN PENGAJAR -->
+        <div class="bg-white rounded-2xl shadow-[0_20px_50px_rgba(43,103,119,0.15)] border border-gray-100 p-6 md:p-8">
+            <div class="mb-8 border-b border-gray-100 pb-4 text-center md:text-left">
+                <h2 class="text-xl font-bold text-gray-800">Daftar Widyaiswara</h2>
+                <p class="text-sm text-gray-500 mt-2">Kenali para Widyaiswara yang berdedikasi untuk membentuk kapasitas kepemimpinan yang berkarakter dan inovasi pelayanan Anda.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                
+                <!-- Pengajar 1 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[-6deg] transition-transform duration-500 group-hover/card:rotate-[-12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <!-- onerror diganti menjadi placeholder avatar generik -->
+                                <img src="wi01.png" alt="Foto Pengajar" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='https://ui-avatars.com/api/?name=Foto+Pengajar&background=e5e7eb&color=6b7280&size=256'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Drs. Muhammad Nasir Tenteng, M.Ec.Dev</h3>
+                    <span class="inline-block bg-teal-50 text-dark-teal text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-teal-100">Widyaiswara Ahli Madya</span>
+                    <a href="https://wa.me/6285256268459?text=Halo%20Bapak,%20saya%20peserta%20PKP%20ingin%20bertanya..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+
+                <!-- Pengajar 2 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[6deg] transition-transform duration-500 group-hover/card:rotate-[12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <!-- onerror diganti menjadi placeholder avatar generik -->
+                                <img src="wi02.png" alt="Foto Pengajar" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='https://ui-avatars.com/api/?name=Foto+Pengajar&background=e5e7eb&color=6b7280&size=256'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Andi Ismawaty, SH, M.Si</h3>
+                    <span class="inline-block bg-teal-50 text-dark-teal text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-teal-100">Widyaiswara Ahli Madya</span>
+                    <a href="https://wa.me/62811412031?text=Halo%20Ibu,%20saya%20peserta%20PKP%20ingin%20bertanya..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+
+                <!-- Pengajar 3 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[-6deg] transition-transform duration-500 group-hover/card:rotate-[-12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <!-- onerror diganti menjadi placeholder avatar generik -->
+                                <img src="wi03.png" alt="Foto Pengajar" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='https://ui-avatars.com/api/?name=Foto+Pengajar&background=e5e7eb&color=6b7280&size=256'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Dr. Muh Nur Udpa, S.H, M.H</h3>
+                    <span class="inline-block bg-teal-50 text-dark-teal text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-teal-100">Widyaiswara Ahli Muda</span>
+                    <a href="https://wa.me/6282194943959?text=Halo%20Bapak,%20saya%20peserta%20PKP%20ingin%20bertanya..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+				
+				<!-- Pengajar 4 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[6deg] transition-transform duration-500 group-hover/card:rotate-[12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <!-- onerror diganti menjadi placeholder avatar generik -->
+                                <img src="wi04.png" alt="Foto Pengajar" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='https://ui-avatars.com/api/?name=Foto+Pengajar&background=e5e7eb&color=6b7280&size=256'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Muhammad Irsyad Sayuti, S.STP., M.Si</h3>
+                    <span class="inline-block bg-teal-50 text-dark-teal text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-teal-100">Widyaiswara Ahli Muda</span>
+                    <a href="https://wa.me/6282213360411?text=Halo%20Bapak,%20saya%20peserta%20PKP%20ingin%20bertanya..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+
+       <!-- BAGIAN PANITIA -->
+        <div class="bg-white rounded-2xl shadow-[0_20px_50px_rgba(43,103,119,0.15)] border border-gray-100 p-6 md:p-8">
+            <div class="mb-8 border-b border-gray-100 pb-4 text-center md:text-left">
+                <h2 class="text-xl font-bold text-gray-800">Daftar Tim Panitia Penyelenggara</h2>
+                <p class="text-sm text-gray-500 mt-2">Kami hadir untuk memastikan kenyamanan Anda. Silahkan bubungi tim kami untuk segala kebutuhan terkait informasi, layanan administrasi, maupun kendala teknis.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Panitia 1 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[6deg] transition-transform duration-500 group-hover/card:rotate-[12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <!-- onerror tetap user01.png karena ini bagian panitia -->
+                                <img src="17.png" alt="Foto Panitia" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='user01.png'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Nafiqa Harseno Wibowo, S.Kom</h3>
+                    <span class="inline-block bg-blue-50 text-blue-600 text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-blue-100">PIC</span>
+                    <a href="https://wa.me/6282233513202?text=Halo%20PIC,%20saya%20ingin%20bertanya%20mengenai..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+
+                <!-- Panitia 2 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[-6deg] transition-transform duration-500 group-hover/card:rotate-[-12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <img src="18.png" alt="Foto Panitia" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='user02.png'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Nurhalifa Wahyu Saputri, S.Sos</h3>
+                    <span class="inline-block bg-yellow-50 text-yellow-700 text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-yellow-100">PIC</span>
+                    <a href="https://wa.me/6282195941331?text=Halo%20PIC,%20saya%20ingin%20bertanya%20mengenai..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+
+                <!-- Panitia 3 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[6deg] transition-transform duration-500 group-hover/card:rotate-[12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <img src="19.png" alt="Foto Panitia" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='user03.png'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Ageng Pratiwi, S.IP., M.AP</h3>
+                    <span class="inline-block bg-purple-50 text-purple-600 text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-purple-100">Tim Administrasi</span>
+                    <a href="https://wa.me/6281399281092?text=Halo%20Bapak/Ibu,%20saya%20ingin%20bertanya%20mengenai..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+
+                <!-- Panitia 4 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[-6deg] transition-transform duration-500 group-hover/card:rotate-[-12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <img src="20.png" alt="Foto Panitia" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='user04.png'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Yesika Intan Permatasari, S.Tr.A.B</h3>
+                    <span class="inline-block bg-red-50 text-red-600 text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-red-100">Tim Administrasi</span>
+                    <a href="https://wa.me/6281907425873?text=Halo%20Bapak/Ibu,%20saya%20ingin%20bertanya%20mengenai..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+
+                <!-- Panitia 5 -->
+                <div class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group/card">
+                    <div class="relative w-48 h-48 mb-6 shrink-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-teal/30 to-cyan-400/20 rounded-[2rem] rotate-[6deg] transition-transform duration-500 group-hover/card:rotate-[12deg] group-hover/card:scale-105"></div>
+                        <div class="absolute inset-0 bg-white rounded-[2rem] p-1.5 shadow-sm z-10 transition-transform duration-500 group-hover/card:-translate-y-1">
+                            <div class="w-full h-full rounded-[1.6rem] overflow-hidden bg-gray-50">
+                                <img src="21.png" alt="Foto Panitia" class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onerror="this.src='user05.png'">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-lg leading-tight mb-2">Mutiara Lulu An Nisa, A.Md.Kb.N</h3>
+                    <span class="inline-block bg-orange-50 text-orange-600 text-[11px] font-bold px-4 py-1.5 rounded-full mb-6 border border-orange-100">Tim Keuangan</span>
+                    <a href="https://wa.me/6281356306945?text=Halo%20Bapak/Ibu,%20saya%20ingin%20bertanya%20mengenai..." target="_blank" class="w-full mt-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-semibold transition-all shadow-sm">
+                        <i class="fab fa-whatsapp text-lg"></i> Hubungi via WA
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-6 shrink-0 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500 font-medium">Copyright © 2026 Kementerian Dalam Negeri | BBPK-APDN-IV Makassar</p>
+            <p class="text-sm text-gray-500 font-medium">Created by Nafiqa Harseno Wibowo</p>
+        </div>
+    </footer>
+
+</body>
+</html>

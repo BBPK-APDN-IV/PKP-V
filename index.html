@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Pelatihan Diklat - BBPK APDN-IV</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-teal': '#2b6777',
+                        'dark-teal-light': '#3d8a9c',
+                        'dark-teal-dark': '#1e4a56',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body { height: 100%; margin: 0; }
+        body { font-family: 'Poppins', sans-serif; box-sizing: border-box; }
+        .diagonal-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .diagonal-clip-reverse {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        }
+        .triangle-decoration::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 80px solid #2b6777;
+            border-top: 80px solid transparent;
+        }
+        .profile-triangle::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 100px;
+            height: 100px;
+            background: #2b6777;
+            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            z-index: -1;
+        }
+        .geometric-bg {
+            background: linear-gradient(135deg, #f8f9fa 25%, transparent 25%),
+                        linear-gradient(225deg, #f8f9fa 25%, transparent 25%),
+                        linear-gradient(45deg, #e9ecef 25%, transparent 25%),
+                        linear-gradient(315deg, #e9ecef 25%, transparent 25%);
+            background-size: 60px 60px;
+            background-color: #ffffff;
+        }
+        .abstract-left::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(135deg, #e9ecef 50%, transparent 50%);
+            opacity: 0.5;
+        }
+        .abstract-right::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(225deg, #e9ecef 50%, transparent 50%);
+            opacity: 0.5;
+        }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+<body class="h-full bg-gray-50 overflow-auto">
+    <div class="w-full min-h-full">
+	<nav class="bg-dark-teal text-white py-3 px-4 md:px-8 shrink-0 relative z-20 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-dark-teal text-lg"></i>
+                </div>
+                <span class="font-semibold text-sm md:text-base">PORTAL PELATIHAN PKP</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 md:space-x-6">
+                
+                <a href="https://bbpk-apdn-iv.github.io/portal-pengaduan-informasi/index.html" target="_blank" class="flex items-center space-x-1.5 text-yellow-300 hover:text-yellow-100 transition-colors font-medium"> 
+                    <i class="fas fa-headset"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Pengaduan Fasilitas</span>
+                </a>
+                
+				<div class="w-px h-5 bg-white/30 shrink-0"></div>
+				
+				<a href="https://heyzine.com/flip-book/5804fc5894.html#page/11" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-map-marked-alt"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Denah Gedung</span>
+                </a>
+				
+                <div class="w-px h-5 bg-white/30"></div>
+
+                <a href="https://ppsdmregmakassar.kemendagri.go.id/" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-globe"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">WEB Utama</span> 
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+        <section class="relative h-[350px] md:h-[450px] lg:h-[500px]">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('gedungA.JPG');"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-teal-dark/90 via-dark-teal/80 to-dark-teal-light/70"></div>
+            
+            <div class="relative h-full flex items-center justify-center px-4 pb-24 md:pb-32">
+                <div class="text-center">
+                    <div class="inline-block mb-4">
+                        <div class="w-16 h-1 bg-white/60 mx-auto mb-4"></div>
+                    </div>
+                    <h1 id="hero-title" class="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-wide">
+                        SELAMAT DATANG<br>
+                        <span class="text-cyan-300">PESERTA PKP ANGKATAN V</span><br>
+                        TAHUN 2026
+                    </h1>
+					
+                    <p class="mt-5 text-cyan-50/90 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
+                        Fasilitas pembelajaran digital interaktif guna mendukung pengembangan kompetensi dan inovasi kepemimpinan Anda.
+                    </p>
+                   
+                    <div class="inline-block mt-4">
+                        <div class="w-16 h-1 bg-white/60 mx-auto mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative z-20 -mt-24 md:-mt-32 px-4 pb-12" id="quick-access">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                    <a href="jadwal.html" class="animate-on-scroll group relative bg-white/90 backdrop-blur-xl border border-white/50 rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(43,103,119,0.15)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors duration-500 shadow-sm">
+                            <i class="fas fa-calendar-alt text-2xl text-blue-500 group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="relative font-bold text-gray-800 text-sm md:text-base mb-1 group-hover:text-blue-600 transition-colors">JADWAL</h3>
+                        <p class="relative text-xs text-gray-500 text-center line-clamp-3">Pantau agenda harian dan timeline kegiatan pelatihan Anda.</p>
+                        <div class="relative mt-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="text-xs font-semibold text-blue-500 flex items-center gap-1">Akses <i class="fas fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="materi.html" class="animate-on-scroll group relative bg-white/90 backdrop-blur-xl border border-white/50 rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(43,103,119,0.15)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-green-500 transition-colors duration-500 shadow-sm">
+                            <i class="fas fa-book-open text-2xl text-green-500 group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="relative font-bold text-gray-800 text-sm md:text-base mb-1 group-hover:text-green-600 transition-colors">MATERI</h3>
+                        <p class="relative text-xs text-gray-500 text-center line-clamp-3">Akses dan unduh modul, bahan tayang, serta referensi.</p>
+                        <div class="relative mt-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="text-xs font-semibold text-green-500 flex items-center gap-1">Akses <i class="fas fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="absensi.html" class="animate-on-scroll group relative bg-white/90 backdrop-blur-xl border border-white/50 rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(43,103,119,0.15)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-orange-500 transition-colors duration-500 shadow-sm">
+                            <i class="fas fa-clipboard-check text-2xl text-orange-500 group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="relative font-bold text-gray-800 text-sm md:text-base mb-1 group-hover:text-orange-600 transition-colors">ABSENSI</h3>
+                        <p class="relative text-xs text-gray-500 text-center line-clamp-3">Rekam kehadiran harian Anda dengan cepat dan terintegrasi.</p>
+                        <div class="relative mt-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="text-xs font-semibold text-orange-500 flex items-center gap-1">Akses <i class="fas fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a>
+
+					<a href="tugas.html" class="animate-on-scroll group relative bg-white/90 backdrop-blur-xl border border-white/50 rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(43,103,119,0.15)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-purple-500 transition-colors duration-500 shadow-sm">
+                            <i class="fas fa-file-upload text-2xl text-purple-500 group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="relative font-bold text-gray-800 text-sm md:text-base mb-1 group-hover:text-purple-600 transition-colors">UPLOAD TUGAS</h3>
+                        <p class="relative text-xs text-gray-500 text-center line-clamp-3">Kumpulkan penugasan individu dan kelompok dengan mudah.</p>
+                        <div class="relative mt-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="text-xs font-semibold text-purple-500 flex items-center gap-1">Akses <i class="fas fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a>
+
+					<a href="tim.html" class="animate-on-scroll group relative bg-white/90 backdrop-blur-xl border border-white/50 rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(43,103,119,0.15)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col items-center col-span-2 md:col-span-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-50/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-red-500 transition-colors duration-500 shadow-sm">
+                            <i class="fas fa-address-book text-2xl text-red-500 group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3 class="relative font-bold text-gray-800 text-sm md:text-base mb-1 group-hover:text-red-600 transition-colors">PROFIL TIM</h3>
+                        <p class="relative text-xs text-gray-500 text-center line-clamp-3">Kenali widyaiswara dan hubungi panitia penyelenggara.</p>
+                        <div class="relative mt-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="text-xs font-semibold text-red-500 flex items-center gap-1">Akses <i class="fas fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-dark-teal py-16 md:py-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+                    <div class="lg:col-span-2 flex justify-center lg:justify-end">
+                        <div class="relative">
+                            <div class="relative w-64 h-80 md:w-72 md:h-96 overflow-hidden rounded-lg shadow-2xl">
+                                <img src="kepalabbpk.png" alt="Foto Pejabat" class="w-full h-full object-cover object-top" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #3d8a9c, #1e4a56)'; this.alt='Foto tidak tersedia';"> 
+                                <div class="absolute bottom-0 left-0 w-0 h-0 border-l-[80px] border-l-cyan-400 border-t-[80px] border-t-transparent"></div>
+                            </div>
+                            <div class="mt-4 text-center lg:text-left">
+                                <h3 id="official-name" class="text-white font-bold text-lg">Sugiarto, S.E., M. Si, CACP</h3>
+                                <p id="official-position" class="text-gray-200 text-sm">Kepala BBPK APDN-IV Makassar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 text-white">
+                        <h2 id="welcome-title" class="text-xl md:text-2xl lg:text-3xl font-bold mb-6 leading-tight">SELAMAT DATANG PESERTA<br><span class="text-cyan-300">PKP ANGKATAN V TAHUN 2026</span></h2>
+						<div class="space-y-4 text-gray-100 text-sm md:text-base leading-relaxed text-justify">
+							<p>Selamat datang di Portal Pelatihan Kepemimpinan Pengawas (PKP) Angkatan V Tahun 2026. Pelatihan ini merupakan program strategis untuk mengembangkan kompetensi kepemimpinan operasional bagi Pejabat Pengawas, guna menjamin akuntabilitas jabatan dalam mengendalikan pelaksanaan kegiatan pelayanan publik secara efektif, efisien, dan sesuai dengan standar operasional prosedur.</p>
+							<p>Melalui pelatihan ini, diharapkan seluruh peserta mampu membangun tim kerja yang tangguh dan mengoptimalkan inovasi pelayanan dengan senantiasa mengimplementasikan nilai-nilai dasar ASN yaitu BerAKHLAK (Berorientasi Pelayanan, Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif) dalam setiap pelaksanaan tugas. Mari bersama-sama kita wujudkan sosok pemimpin pengawas yang berintegritas, profesional, dan berdedikasi tinggi untuk mewujudkan pelayanan publik yang prima.</p>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-16 md:py-20 overflow-hidden geometric-bg">
+            <div class="absolute left-0 top-0 w-32 md:w-48 h-full bg-gradient-to-br from-gray-200/50 to-transparent"></div>
+            <div class="absolute right-0 top-0 w-32 md:w-48 h-full bg-gradient-to-bl from-gray-200/50 to-transparent"></div>
+            <div class="relative max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-teal mb-2">PROFIL KOORDINATOR</h2>
+                    <div class="w-24 h-1 bg-dark-teal mx-auto"></div>
+                </div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-4xl mx-auto">
+				
+				<div class="text-center">
+					<div class="relative inline-block mb-4">
+						<div class="absolute -bottom-4 -right-4 w-56 h-56 md:w-64 md:h-64 bg-dark-teal" style="clip-path: polygon(100% 0, 0 100%, 100% 100%);"></div>
+						
+						<div class="relative w-56 h-64 md:w-64 md:h-72 overflow-hidden rounded-lg shadow-xl">
+							<img src="koordinator.png" alt="Ketua Koordinator" class="w-full h-full object-cover object-top" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #3d8a9c, #1e4a56)'; this.alt='Foto tidak tersedia';">
+						</div>
+					</div>
+					<div class="mt-6">
+						<span class="inline-block bg-dark-teal text-white text-xs px-3 py-1 rounded-full mb-2">Ketua Koordinator</span>
+						<h3 class="text-lg font-bold text-gray-800">Hamzah, S.Sos., M.M</h3>
+						<p class="text-gray-600 text-sm">Asesor SDM Aparatur Ahli Madya</p>
+					</div>
+				</div>
+				
+				<div class="text-center">
+					<div class="relative inline-block mb-4">
+						<div class="absolute -bottom-4 -left-4 w-56 h-56 md:w-64 md:h-64 bg-dark-teal-light" style="clip-path: polygon(0 0, 0 100%, 100% 100%);"></div>
+						
+						<div class="relative w-56 h-64 md:w-64 md:h-72 overflow-hidden rounded-lg shadow-xl">
+							<img src="subkoordinator.png" alt="Wakil Koordinator" class="w-full h-full object-cover object-top" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #3d8a9c, #1e4a56)'; this.alt='Foto tidak tersedia';">
+						</div>
+					</div>
+					<div class="mt-6">
+						<span class="inline-block bg-dark-teal-light text-white text-xs px-3 py-1 rounded-full mb-2">Sub Koordinator</span>
+						<h3 class="text-lg font-bold text-gray-800">Sultan Hasanuddin, S.STP, M.AP</h3>
+						<p class="text-gray-600 text-sm">Analis Pengembangan Kompetensi Ahli Pertama</p>
+					</div>
+				</div>
+			</div>
+            </div>
+        </section>
+
+        <footer class="bg-dark-teal-dark text-white py-12">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    
+                    <div class="text-center md:text-left">
+                        <div class="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-3 md:space-y-0 md:space-x-4 mb-6">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center overflow-hidden p-1 shadow-md">
+                                <img src="footer.png" alt="Logo Kemendagri" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center md:text-left">
+                                <h3 class="font-bold text-lg md:text-xl leading-tight">BBPK-APDN-IV</h3>
+                                <p class="text-sm text-cyan-300 font-medium">Kementerian Dalam Negeri</p>
+								<p class="text-[11px] text-gray-300 font-light mt-1 italic">"Melangkah Bersama, Memimpin dengan Karya."</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-300 mb-4">Ikuti Kami:</p>
+                        <div class="flex justify-center md:justify-start space-x-3">
+                            <a href="https://www.instagram.com/bbpk_apdn_makassar?igsh=MWhqY3JjenR2NHgyMQ==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors duration-300"> <i class="fab fa-instagram text-lg"></i> </a> 
+                            <a href="https://www.facebook.com/share/14NV1ssNewB/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors duration-300"> <i class="fab fa-facebook-f text-lg"></i> </a> 
+                            <a href="https://youtube.com/@ppsdmkemendagriregionalmak5546?si=cxQtv3WEdiOgub5F" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors duration-300"> <i class="fab fa-youtube text-lg"></i> </a>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="font-bold text-lg mb-4 flex items-center justify-center md:justify-start"><i class="fas fa-info-circle mr-2 text-cyan-400"></i> Tentang BBPK-APDN-IV</h3>
+                        <p class="text-justify text-sm text-gray-300 leading-relaxed">Balai Besar Pengembangan Kompetensi Aparatur Pemerintahan Dalam Negeri Wilayah IV (BBPK APDN-IV), yang pada masa lalu dikenal sebagai PPSDM Kemendagri Regional Makassar. Balai Besar Pengembangan Kompetensi Aparatur Pemerintahan Dalam Negeri Wilayah IV (BBPK APDN-IV) mempunyai peran strategis dalam mengelola program pengembangan kompetensi aparatur pemerintahan di wilayah layanannya, meliputi perencanaan, pelaksanaan, dan evaluasi pendidikan serta pelatihan bagi ASN demi peningkatan kualitas layanan pemerintahan daerah.</p>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="font-bold text-lg mb-4 flex items-center justify-center md:justify-start"><i class="fas fa-phone-alt mr-2 text-cyan-400"></i> Hubungi Kami</h3>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start justify-center md:justify-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-cyan-400"></i> <span>Jl. Paccerakkang No.3 Kec. Biringkanaya,<br>Kota Makassar, Sulawesi Selatan 90245</span></li>
+                            <li class="flex items-center justify-center md:justify-start"><i class="fas fa-phone mr-3 text-cyan-400"></i> <span>0811-2702-7177</span></li>
+                            <li class="flex items-center justify-center md:justify-start"><i class="fas fa-envelope mr-3 text-cyan-400"></i> <span>mediappsdmmks@gmail.com</span></li>
+                            <li class="flex items-center justify-center md:justify-start"><i class="fas fa-globe mr-3 text-cyan-400"></i> <span>www.ppsdmregmakassar.kemendagri.go.id</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-10 pt-6 border-t border-white/20 text-center">
+                    <p class="text-xs text-gray-400">Copyright © 2026 Kementerian Dalam Negeri | BBPK-APDN-IV Makassar</p>
+					<p class="text-xs text-gray-400">Created by Nafiqa Harseno Wibowo</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const defaultConfig = {
+            hero_title: 'Selamat Datang PESERTA PKP TAHUN 2026',
+            welcome_title: 'SELAMAT DATANG PESERTA PKP TAHUN 2026',
+            official_name: 'Sugiarto, S.E., M. Si, CACP',
+            official_position: 'Kepala BBPK-APDN-IV',
+            background_color: '#1e4a56',
+            surface_color: '#ffffff',
+            text_color: '#1f2937',
+            primary_action: '#2b6777',
+            secondary_action: '#3d8a9c'
+        };
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange: async (config) => {
+                    const heroTitle = document.getElementById('hero-title');
+                    if (heroTitle) {
+                        heroTitle.innerHTML = `Selamat Datang<br><span class="text-cyan-300">PESERTA PKP</span><br>TAHUN 2026`;
+                    }
+
+                    const welcomeTitle = document.getElementById('welcome-title');
+                    if (welcomeTitle) {
+                        welcomeTitle.innerHTML = `SELAMAT DATANG PESERTA<br><span class="text-cyan-300">PKP TAHUN 2026</span>`;
+                    }
+
+                    const officialName = document.getElementById('official-name');
+                    if (officialName) {
+                        officialName.textContent = config.official_name || defaultConfig.official_name;
+                    }
+
+                    const officialPosition = document.getElementById('official-position');
+                    if (officialPosition) {
+                        officialPosition.textContent = config.official_position || defaultConfig.official_position;
+                    }
+
+                    const primaryColor = config.primary_action || defaultConfig.primary_action;
+                    const secondaryColor = config.secondary_action || defaultConfig.secondary_action;
+                    
+                    document.documentElement.style.setProperty('--primary-color', primaryColor);
+                    document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+                },
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        { get: () => config.background_color, set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); } },
+                        { get: () => config.surface_color, set: (value) => { config.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); } },
+                        { get: () => config.text_color, set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); } },
+                        { get: () => config.primary_action, set: (value) => { config.primary_action = value; window.elementSdk.setConfig({ primary_action: value }); } },
+                        { get: () => config.secondary_action, set: (value) => { config.secondary_action = value; window.elementSdk.setConfig({ secondary_action: value }); } }
+                    ],
+                    borderables: [], fontEditable: undefined, fontSizeable: undefined
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ['hero_title', config.hero_title || defaultConfig.hero_title],
+                    ['welcome_title', config.welcome_title || defaultConfig.welcome_title],
+                    ['official_name', config.official_name || defaultConfig.official_name],
+                    ['official_position', config.official_position || defaultConfig.official_position]
+                ])
+            });
+        }
+
+        // Smooth scrolling untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if(href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

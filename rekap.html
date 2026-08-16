@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Absensi - PORTAL PELATIHAN PKP</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { 'dark-teal': '#2b6777', 'dark-teal-light': '#3d8a9c' }, fontFamily: { 'poppins': ['Poppins', 'sans-serif'] } } }
+        }
+    </script>
+    <style> html, body { height: 100%; margin: 0; font-family: 'Poppins', sans-serif; background-color: #f3f4f6; } </style>
+</head>
+<body class="h-full flex flex-col">
+
+    <nav class="bg-dark-teal text-white py-3 px-4 md:px-8 shrink-0 relative z-20 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-dark-teal text-lg"></i>
+                </div>
+                <span class="font-semibold text-sm md:text-base">PORTAL PELATIHAN PKP</span>
+            </div>
+            <a href="absensi.html" class="flex items-center space-x-2 hover:text-cyan-200 transition-colors"> 
+                <i class="fas fa-arrow-left"></i> <span class="text-sm md:text-base">Kembali</span> 
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 py-8 relative z-20">
+        
+        <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">Rekapitulasi Kehadiran</h1>
+                <p class="text-sm text-gray-500">Data absensi harian ditarik otomatis dari sistem.</p>
+            </div>
+            <button onclick="fetchRekap()" class="bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium shadow-sm flex items-center gap-2 transition-colors">
+                <i class="fas fa-sync-alt" id="sync-icon"></i> Segarkan Data
+            </button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-gray-600">
+                    <thead class="bg-gray-50 border-b border-gray-200 text-gray-700 uppercase text-xs font-semibold">
+                        <tr>
+                            <th class="px-6 py-4">Waktu Absen</th>
+                            <th class="px-6 py-4">Nama Lengkap</th>
+                            <th class="px-6 py-4">Tanggal Pelatihan</th>
+                            <th class="px-6 py-4">Angk. / Kel.</th>
+                            <th class="px-6 py-4 text-center">Tanda Tangan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" class="divide-y divide-gray-100">
+                        <tr id="loading-row">
+                            <td colspan="5" class="px-6 py-12 text-center text-gray-500">
+                                <i class="fas fa-circle-notch fa-spin text-3xl mb-3 text-dark-teal"></i>
+                                <p>Menarik data absensi terbaru...</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // MASUKKAN WEB APP URL GOOGLE APPS SCRIPT ANDA DI SINI JUGA
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwFMH6YXzGKGyRfEj9ia-dmh37HEdTwEbgurtCdVs8oph-hujyl43mZvij9hKQap25e/exec';
+        
+        function fetchRekap() {
+            const tbody = document.getElementById('table-body');
+            const syncIcon = document.getElementById('sync-icon');
+            
+            syncIcon.classList.add('fa-spin');
+            tbody.innerHTML = `<tr id="loading-row"><td colspan="5" class="px-6 py-12 text-center text-gray-500"><i class="fas fa-circle-notch fa-spin text-3xl mb-3 text-dark-teal"></i><p>Menarik data absensi terbaru...</p></td></tr>`;
+
+            fetch(scriptURL + '?action=getRekap')
+                .then(response => response.json())
+                .then(data => {
+                    tbody.innerHTML = ''; // Bersihkan loading
+                    
+                    if(data.length === 0) {
+                        tbody.innerHTML = `<tr><td colspan="5" class="px-6 py-8 text-center text-gray-500 bg-gray-50">Belum ada data absensi yang masuk.</td></tr>`;
+                        syncIcon.classList.remove('fa-spin');
+                        return;
+                    }
+
+                    data.forEach(row => {
+                        // Cek apakah kolom TTD mengandung link Google Drive
+                        let ttdHtml = '<span class="text-xs text-red-400 bg-red-50 px-2 py-1 rounded">Tidak ada TTD</span>';
+                        if(row['Link TTD'] && row['Link TTD'].includes('drive.google.com')) {
+                            ttdHtml = `<a href="${row['Link TTD']}" target="_blank" class="inline-flex items-center gap-1 text-xs font-semibold text-dark-teal bg-cyan-50 hover:bg-cyan-100 px-3 py-1.5 rounded-full transition-colors border border-cyan-100"><i class="fas fa-eye"></i> Lihat .PNG</a>`;
+                        }
+
+                        const tr = document.createElement('tr');
+                        tr.className = "hover:bg-gray-50 transition-colors";
+                        tr.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap text-xs text-gray-500">${row['Waktu Absen']}</td>
+                            <td class="px-6 py-4 font-medium text-gray-800">${row['Nama']}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">${row['Tanggal']}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-bold mr-1">A${row['Angkatan']}</span>
+                                <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-bold">K${row['Kelompok']}</span>
+                            </td>
+                            <td class="px-6 py-4 text-center">${ttdHtml}</td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                    syncIcon.classList.remove('fa-spin');
+                })
+                .catch(error => {
+                    tbody.innerHTML = `<tr><td colspan="5" class="px-6 py-8 text-center text-red-500 bg-red-50"><i class="fas fa-exclamation-triangle mb-2 text-xl"></i><br>Gagal memuat data. Periksa koneksi internet atau URL script Anda.</td></tr>`;
+                    syncIcon.classList.remove('fa-spin');
+                });
+        }
+
+        // Panggil data saat halaman pertama kali dibuka
+        window.addEventListener('DOMContentLoaded', fetchRekap);
+    </script>
+</body>
+</html>

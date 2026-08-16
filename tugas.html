@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Tugas - Portal PELATIHAN PKP</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'dark-teal': '#2b6777', 'dark-teal-light': '#3d8a9c', 'dark-teal-dark': '#1e4a56' },
+                    fontFamily: { 'poppins': ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body { height: 100%; margin: 0; }
+        body { font-family: 'Poppins', sans-serif; box-sizing: border-box; background-color: #f3f4f6; }
+        .geometric-pattern { background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="h-full flex flex-col">
+
+    <nav class="bg-dark-teal text-white py-3 px-4 md:px-8 shrink-0 relative z-20 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-dark-teal text-lg"></i>
+                </div>
+                <span class="font-semibold text-sm md:text-base">PORTAL PELATIHAN PKP</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 md:space-x-6">
+                
+                <a href="https://bbpk-apdn-iv.github.io/portal-pengaduan-informasi/index.html" target="_blank" class="flex items-center space-x-1.5 text-yellow-300 hover:text-yellow-100 transition-colors font-medium"> 
+                    <i class="fas fa-headset"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Pengaduan Fasilitas</span>
+                </a>
+                
+                <div class="w-px h-5 bg-white/30 shrink-0"></div>
+                
+                <a href="https://heyzine.com/flip-book/5804fc5894.html#page/11" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-map-marked-alt"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">Denah Gedung</span>
+                </a>
+                
+                <div class="w-px h-5 bg-white/30"></div>
+
+                <a href="https://ppsdmregmakassar.kemendagri.go.id/" target="_blank" class="flex items-center space-x-1.5 hover:text-cyan-200 transition-colors"> 
+                    <i class="fas fa-globe"></i> 
+                    <span class="text-sm md:text-base hidden sm:inline-block">WEB Utama</span> 
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-gradient-to-br from-dark-teal via-dark-teal to-dark-teal-light pt-10 pb-28 shrink-0 overflow-hidden">
+        <div class="absolute inset-0 geometric-pattern opacity-30"></div>
+        <div class="absolute right-0 top-0 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <nav class="flex text-sm text-cyan-100 mb-6">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="inline-flex items-center hover:text-white transition-colors"><i class="fas fa-home mr-2 text-xs"></i> Beranda</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fas fa-chevron-right text-xs text-cyan-300/50 mx-2"></i>
+                            <span class="text-white font-medium">Upload Tugas</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fas fa-file-upload text-cyan-300"></i> Pengumpulan Tugas
+                    </h1>
+                    <p class="text-cyan-50 max-w-2xl text-sm md:text-base opacity-90">
+                        Pilih tahapan pembelajaran untuk mengunggah hasil tugas MOOC Tahap 1, MOOC Tahap 2, maupun E-Learning.
+                    </p>
+                </div>
+                <a href="index.html" class="inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-2.5 rounded-xl transition-all backdrop-blur-md text-sm font-medium w-fit">
+                    <i class="fas fa-arrow-left"></i><span>Kembali</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 -mt-16 relative z-20 pb-12">
+        <div class="bg-white rounded-2xl shadow-[0_20px_50px_rgba(43,103,119,0.15)] border border-gray-100 p-6 md:p-8 min-h-[400px]">
+            
+            <div id="view-categories" class="block transition-all duration-300">
+                <div class="mb-8 border-b border-gray-100 pb-4 text-center md:text-left">
+                    <h2 class="text-xl font-bold text-gray-800">Tahapan Pembelajaran</h2>
+                    <p class="text-sm text-gray-500 mt-2">Pilih kategori tugas yang ingin Anda kumpulkan.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    
+                    <a onclick="openCategory('mooc', 'Tugas MOOC Tahap 1')" class="group relative overflow-hidden flex flex-col items-center p-8 border border-gray-200 rounded-2xl hover:border-blue-500 hover:shadow-xl transition-all duration-300 bg-white cursor-pointer text-center">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-50 rounded-full group-hover:scale-150 transition-transform duration-500 ease-in-out z-0"></div>
+                        <div class="w-20 h-20 rounded-2xl bg-blue-100 flex items-center justify-center mb-6 relative z-10 group-hover:bg-blue-500 transition-colors">
+                            <i class="fas fa-laptop-code text-blue-500 text-3xl group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors relative z-10 mb-2">MOOC Tahap 1</h3>
+                        <p class="text-sm text-gray-500 relative z-10">Pengumpulan tugas mandiri Tahap 1 untuk Agenda 1 hingga Agenda 4.</p>
+                        <div class="mt-6 flex items-center text-blue-500 text-sm font-semibold relative z-10">
+                            Buka Folder <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <a onclick="openCategory('mooc2', 'Tugas MOOC Tahap 2')" class="group relative overflow-hidden flex flex-col items-center p-8 border border-gray-200 rounded-2xl hover:border-indigo-500 hover:shadow-xl transition-all duration-300 bg-white cursor-pointer text-center">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-indigo-50 rounded-full group-hover:scale-150 transition-transform duration-500 ease-in-out z-0"></div>
+                        <div class="w-20 h-20 rounded-2xl bg-indigo-100 flex items-center justify-center mb-6 relative z-10 group-hover:bg-indigo-500 transition-colors">
+                            <i class="fas fa-laptop-medical text-indigo-500 text-3xl group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors relative z-10 mb-2">MOOC Tahap 2</h3>
+                        <p class="text-sm text-gray-500 relative z-10">Pengumpulan tugas mandiri Tahap 2 untuk Agenda 1 hingga Agenda 4.</p>
+                        <div class="mt-6 flex items-center text-indigo-500 text-sm font-semibold relative z-10">
+                            Buka Folder <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <a onclick="openCategory('elearning', 'Tugas E-Learning (Distance Learning)')" class="group relative overflow-hidden flex flex-col items-center p-8 border border-gray-200 rounded-2xl hover:border-dark-teal hover:shadow-xl transition-all duration-300 bg-white cursor-pointer text-center">
+                        <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-cyan-50 rounded-full group-hover:scale-150 transition-transform duration-500 ease-in-out z-0"></div>
+                        <div class="w-20 h-20 rounded-2xl bg-cyan-100 flex items-center justify-center mb-6 relative z-10 group-hover:bg-dark-teal transition-colors">
+                            <i class="fas fa-chalkboard-teacher text-dark-teal text-3xl group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 group-hover:text-dark-teal transition-colors relative z-10 mb-2">E-Learning</h3>
+                        <p class="text-sm text-gray-500 relative z-10">Pengumpulan lembar kerja individu, tugas kelompok, dan laporan seminar.</p>
+                        <div class="mt-6 flex items-center text-dark-teal text-sm font-semibold relative z-10">
+                            Buka Folder <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="view-folders" class="hidden transition-all duration-300 opacity-0">
+                <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-4">
+                    <button onclick="backToCategories()" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors shrink-0">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div>
+                        <h2 id="folder-category-title" class="text-xl font-bold text-gray-800">Judul Kategori</h2>
+                        <p class="text-sm text-gray-500 mt-1">Pilih agenda untuk mengunggah tugas Anda.</p>
+                    </div>
+                </div>
+
+                <div id="mooc-folders" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <a onclick="openFolder('agenda1', 'Tugas MOOC Tahap 1 - Agenda 1')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors"><i class="fas fa-folder text-blue-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Agenda 1</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Kepemimpinan Pancasila</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500"></i>
+                    </a>
+                    <a onclick="openFolder('agenda2', 'Tugas MOOC Tahap 1 - Agenda 2')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors"><i class="fas fa-folder text-blue-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Agenda 2</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Kepemimpinan Pelayanan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500"></i>
+                    </a>
+                    <a onclick="openFolder('agenda3', 'Tugas MOOC Tahap 1 - Agenda 3')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors"><i class="fas fa-folder text-blue-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Agenda 3</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Pengendalian Pekerjaan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500"></i>
+                    </a>
+                    <a onclick="openFolder('agenda4', 'Tugas MOOC Tahap 1 - Agenda 4')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors"><i class="fas fa-folder text-blue-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Agenda 4</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Aktualisasi Kepemimpinan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-blue-500"></i>
+                    </a>
+                </div>
+
+                <div id="mooc2-folders" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <a onclick="openFolder('agenda1', 'Tugas MOOC Tahap 2 - Agenda 1')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 group-hover:bg-indigo-500 transition-colors"><i class="fas fa-folder text-indigo-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors">Agenda 1</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Kepemimpinan Pancasila</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-indigo-500"></i>
+                    </a>
+                    <a onclick="openFolder('agenda2', 'Tugas MOOC Tahap 2 - Agenda 2')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 group-hover:bg-indigo-500 transition-colors"><i class="fas fa-folder text-indigo-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors">Agenda 2</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Kepemimpinan Pelayanan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-indigo-500"></i>
+                    </a>
+                    <a onclick="openFolder('agenda3', 'Tugas MOOC Tahap 2 - Agenda 3')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 group-hover:bg-indigo-500 transition-colors"><i class="fas fa-folder text-indigo-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors">Agenda 3</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Pengendalian Pekerjaan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-indigo-500"></i>
+                    </a>
+                    <a onclick="openFolder('agenda4', 'Tugas MOOC Tahap 2 - Agenda 4')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 group-hover:bg-indigo-500 transition-colors"><i class="fas fa-folder text-indigo-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors">Agenda 4</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Aktualisasi Kepemimpinan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-indigo-500"></i>
+                    </a>
+                </div>
+
+                <div id="elearning-folders" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <a onclick="openFolder('agenda1', 'Tugas E-Learning Agenda 1: Kepemimpinan Pancasila')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-dark-teal hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors"><i class="fas fa-folder text-blue-500 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-dark-teal transition-colors">Agenda 1</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Kepemimpinan Pancasila</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-dark-teal"></i>
+                    </a>
+                    <a onclick="openFolder('agenda2', 'Tugas E-Learning Agenda 2: Kepemimpinan Pelayanan')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-dark-teal hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center mr-4 group-hover:bg-yellow-500 transition-colors"><i class="fas fa-folder text-yellow-600 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-dark-teal transition-colors">Agenda 2</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Kepemimpinan Pelayanan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-dark-teal"></i>
+                    </a>
+                    <a onclick="openFolder('agenda3', 'Tugas E-Learning Agenda 3: Pengendalian Pekerjaan')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-dark-teal hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mr-4 group-hover:bg-green-500 transition-colors"><i class="fas fa-folder text-green-600 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-dark-teal transition-colors">Agenda 3</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Pengendalian Pekerjaan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-dark-teal"></i>
+                    </a>
+                    <a onclick="openFolder('agenda4', 'Tugas E-Learning Agenda 4: Aktualisasi Kepemimpinan')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-dark-teal hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mr-4 group-hover:bg-purple-500 transition-colors"><i class="fas fa-folder text-purple-600 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-dark-teal transition-colors">Agenda 4</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Aktualisasi Kepemimpinan</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-dark-teal"></i>
+                    </a>
+                    <a onclick="openFolder('aktualisasi', 'Pengumpulan Laporan Akhir Seminar Aksi Perubahan')" class="group flex items-center p-4 border border-gray-200 rounded-xl hover:border-dark-teal hover:shadow-md transition-all duration-300 bg-gray-50 hover:bg-white cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mr-4 group-hover:bg-indigo-500 transition-colors"><i class="fas fa-folder text-indigo-600 text-xl group-hover:text-white transition-colors"></i></div>
+                        <div class="flex-1"><h4 class="font-semibold text-gray-800 group-hover:text-dark-teal transition-colors">Laporan Akhir</h4><p class="text-[10px] text-gray-500 mt-1 leading-tight">Rancangan & Laporan Akhir</p></div>
+                        <i class="fas fa-chevron-right text-gray-300 group-hover:text-dark-teal"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="view-files" class="hidden transition-all duration-300 opacity-0">
+                <div class="flex items-center gap-4 mb-6">
+                    <button onclick="backToFolders()" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors shrink-0">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h3 id="current-folder-title" class="text-lg font-bold text-dark-teal uppercase tracking-wider">Nama Folder</h3>
+                </div>
+
+                <div id="dynamic-file-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full">
+                    </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-6 shrink-0 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500 font-medium">Copyright © 2026 Kementerian Dalam Negeri | BBPK-APDN-IV Makassar</p>
+            <p class="text-sm text-gray-500 font-medium">Created by Nafiqa Harseno Wibowo</p>
+        </div>
+    </footer>
+
+    <script>
+        // 🌟 DATABASE TUGAS DIPISAH BERDASARKAN KATEGORI (MOOC / MOOC 2 / E-LEARNING)
+        const tugasData = {
+            'mooc': {
+                'agenda1': [ { title: 'Upload Tugas MOOC Tahap 1', type: 'Tugas MOOC 1', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/1w-8HH5Xd_o7Dvg3DUnN1FUu6kb7Oce3d?usp=sharing' } ],
+                'agenda2': [ { title: 'Upload Tugas MOOC Tahap 1', type: 'Tugas MOOC 1', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/1qxJKJIaTzfMIyEy4mxciO7NbyBi_Bv3A?usp=sharing' } ],
+                'agenda3': [ { title: 'Upload Tugas MOOC Tahap 1', type: 'Tugas MOOC 1', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/1ICFvoKh0P_PLN_GrwitgmujIF5lvwiWx?usp=sharing' } ],
+                'agenda4': [ { title: 'Upload Tugas MOOC Tahap 1', type: 'Tugas MOOC 1', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/1QaAZBsq5Jo8jVJOJmbDHk9RuYNB7EUF4?usp=sharing' } ]
+            },
+            // 🌟 DITAMBAHKAN: Data untuk MOOC Tahap 2 (Ganti linknya dengan link form yg benar)
+            'mooc2': {
+                'agenda1': [ { title: 'Upload Tugas MOOC Tahap 2', type: 'Tugas MOOC 2', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-indigo-500', bgClass: 'bg-indigo-50', linkUpload: 'https://drive.google.com/drive/folders/1Pq_qGsXF-rtuXQ-oAfZz6ea5g-fsExCG?usp=sharing' } ],
+                'agenda2': [ { title: 'Upload Tugas MOOC Tahap 2', type: 'Tugas MOOC 2', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-indigo-500', bgClass: 'bg-indigo-50', linkUpload: 'https://drive.google.com/drive/folders/1jsWP6hSJOmt0vaoz_p9s5Q10ys-5S2zA?usp=sharing' } ],
+                'agenda3': [ { title: 'Upload Tugas MOOC Tahap 2', type: 'Tugas MOOC 2', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-indigo-500', bgClass: 'bg-indigo-50', linkUpload: 'https://drive.google.com/drive/folders/1IhfifZpNPSm90YFwZcnpWqifnhl5pkd4?usp=sharing' } ],
+                'agenda4': [ { title: 'Upload Tugas MOOC Tahap 2', type: 'Tugas MOOC 2', deadline: 'Sesuai Jadwal', iconClass: 'fas fa-upload text-indigo-500', bgClass: 'bg-indigo-50', linkUpload: 'https://drive.google.com/drive/folders/1WL6e3jLl5tMvwoU7cU4RRuAxkzMyrXwB?usp=sharing' } ]
+            },
+            'elearning': {
+                'agenda1': [
+                    { title: 'Lembar Kerja Individu', type: 'Individu', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-user-edit text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/11FOOPZy8ahiq4FOZ5eKYdLLSOA5rCrlS?usp=sharing' },
+                    { title: 'Tugas Kelompok 1', type: 'Kelompok 1', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-orange-500', bgClass: 'bg-orange-50', linkUpload: 'https://drive.google.com/drive/folders/1syHbDSU8TGjQr4afLIiyOOCTlv4TmWSU?usp=sharing' },
+                    { title: 'Tugas Kelompok 2', type: 'Kelompok 2', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-yellow-600', bgClass: 'bg-yellow-50', linkUpload: 'https://drive.google.com/drive/folders/1lxQW2UfHOmekk3ZR1lWmMwnNJ22x4-7G?usp=sharing' },
+                    { title: 'Tugas Kelompok 3', type: 'Kelompok 3', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-green-500', bgClass: 'bg-green-50', linkUpload: 'https://drive.google.com/drive/folders/10QM5ystPjxaN9dwJyiX8MgS87QRqAHbb?usp=sharing' },
+                    { title: 'Tugas Kelompok 4', type: 'Kelompok 4', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-cyan-600', bgClass: 'bg-cyan-50', linkUpload: 'https://drive.google.com/drive/folders/1oPAdeVcAfsr6ozCN3TemwYlstGu7e6is?usp=sharing' }
+                ],
+                'agenda2': [
+                    { title: 'Lembar Kerja Individu', type: 'Individu', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-user-edit text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/1JGpITwTPIG7s_ot-BbBfhYS6CULhnWf7?usp=sharing' },
+                    { title: 'Tugas Kelompok 1', type: 'Kelompok 1', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-orange-500', bgClass: 'bg-orange-50', linkUpload: 'https://drive.google.com/drive/folders/1dJU0qF4uLp7MuN1gjuLCybgQejVvlwXb?usp=sharing' },
+                    { title: 'Tugas Kelompok 2', type: 'Kelompok 2', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-yellow-600', bgClass: 'bg-yellow-50', linkUpload: 'https://drive.google.com/drive/folders/1Sb6cgIYBuTkbD2xYUVh7b5CUvPI0LvO1?usp=sharing' },
+                    { title: 'Tugas Kelompok 3', type: 'Kelompok 3', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-green-500', bgClass: 'bg-green-50', linkUpload: 'https://drive.google.com/drive/folders/1PVK0hy1W3NW96NKDmo3sPVQ_F-L-UtLV?usp=sharing' },
+                    { title: 'Tugas Kelompok 4', type: 'Kelompok 4', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-cyan-600', bgClass: 'bg-cyan-50', linkUpload: 'https://drive.google.com/drive/folders/1XowmxcUoABffX1ci8z3SMCBQbscJ7OiN?usp=sharing' }
+                ],
+                'agenda3': [
+                    { title: 'Lembar Kerja Individu', type: 'Individu', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-user-edit text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/170VtQZLhEMcH3_UakH6PWbruDyqr_neG?usp=sharing' },
+                    { title: 'Tugas Kelompok 1', type: 'Kelompok 1', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-orange-500', bgClass: 'bg-orange-50', linkUpload: 'https://drive.google.com/drive/folders/11XV7b8dnaMZOy3XrSxx4Hh46gjwXwFs3?usp=sharing' },
+                    { title: 'Tugas Kelompok 2', type: 'Kelompok 2', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-yellow-600', bgClass: 'bg-yellow-50', linkUpload: 'https://drive.google.com/drive/folders/1_Bk8wyXseG93y-BSwblyqx3WspBQZOQb?usp=sharing' },
+                    { title: 'Tugas Kelompok 3', type: 'Kelompok 3', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-green-500', bgClass: 'bg-green-50', linkUpload: 'https://drive.google.com/drive/folders/17msA9e8Lq51dqW3KFd4ibuVu_r2HFoNu?usp=sharing' },
+                    { title: 'Tugas Kelompok 4', type: 'Kelompok 4', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-cyan-600', bgClass: 'bg-cyan-50', linkUpload: 'https://drive.google.com/drive/folders/1wYtlSNYSTrZiZhLdCJBxarM-uTsTecPk?usp=sharing' }
+                ],
+                'agenda4': [
+                    { title: 'Lembar Kerja Individu', type: 'Individu', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-user-edit text-blue-500', bgClass: 'bg-blue-50', linkUpload: 'https://drive.google.com/drive/folders/1MFpwG-TYRwLo20Dzr1HBMJ7L3nxxiSyN?usp=sharing' },
+                    { title: 'Tugas Kelompok 1', type: 'Kelompok 1', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-orange-500', bgClass: 'bg-orange-50', linkUpload: 'https://drive.google.com/drive/folders/1Z4fbceeXFXgAEUEDJ_Ec-S6fVLa5oGht?usp=sharing' },
+                    { title: 'Tugas Kelompok 2', type: 'Kelompok 2', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-yellow-600', bgClass: 'bg-yellow-50', linkUpload: 'https://drive.google.com/drive/folders/18CWN8Dess95-nWxi3_BarfQt4b-rW7DS?usp=sharing' },
+                    { title: 'Tugas Kelompok 3', type: 'Kelompok 3', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-green-500', bgClass: 'bg-green-50', linkUpload: 'https://drive.google.com/drive/folders/1DJ9DVklUf5goaT8zwrjckkAADReDG7x3?usp=sharing' },
+                    { title: 'Tugas Kelompok 4', type: 'Kelompok 4', deadline: 'Batas: Menyesuaikan Jadwal', iconClass: 'fas fa-users text-cyan-600', bgClass: 'bg-cyan-50', linkUpload: 'https://drive.google.com/drive/folders/19SNiTjmi3GDzMfaW5cRK9Lk3fwt8YGY-?usp=sharing' }
+                ],
+                'aktualisasi': [
+                    { title: 'Upload Dokumen Seminar Rancangan Aksi Perubahan', type: 'Individu', deadline: 'Sebelum Seminar Rancangan Aksi Perubahan', iconClass: 'fas fa-file-signature text-purple-500', bgClass: 'bg-purple-50', linkUpload: 'https://drive.google.com/drive/folders/1xdw39ZyamkiiuDFINAKSmleClcFZuf6H?usp=sharing' },
+                    { title: 'Upload Dokumen Seminar Evaluasi Aksi Perubahan (Final)', type: 'Individu', deadline: 'Sebelum Sidang Kelulusan Akhir', iconClass: 'fas fa-book text-green-500', bgClass: 'bg-green-50', linkUpload: 'https://drive.google.com/drive/folders/14lvTZQ6Sr8MiCFLrUHgmB3rnQYNR1fpS?usp=sharing' }
+                ]
+            }
+        };
+
+        let currentCategory = ''; // Akan menyimpan 'mooc', 'mooc2', atau 'elearning'
+
+        // 🌟 DIUBAH: Fungsi membuka kategori sekarang memproses 3 kondisi
+        function openCategory(category, title) {
+            currentCategory = category;
+            
+            // Sembunyikan Kategori, Tampilkan Folder
+            document.getElementById('view-categories').classList.add('hidden');
+            const viewFolders = document.getElementById('view-folders');
+            viewFolders.classList.remove('hidden');
+            setTimeout(() => { viewFolders.classList.remove('opacity-0'); }, 50);
+
+            // Set Judul
+            document.getElementById('folder-category-title').textContent = title;
+
+            // Sembunyikan semua folder terlebih dahulu
+            document.getElementById('mooc-folders').classList.add('hidden');
+            document.getElementById('mooc2-folders').classList.add('hidden');
+            document.getElementById('elearning-folders').classList.add('hidden');
+
+            // Tampilkan hanya folder yang diklik
+            if (category === 'mooc') {
+                document.getElementById('mooc-folders').classList.remove('hidden');
+            } else if (category === 'mooc2') {
+                document.getElementById('mooc2-folders').classList.remove('hidden');
+            } else {
+                document.getElementById('elearning-folders').classList.remove('hidden');
+            }
+        }
+
+        // FUNGSI KEMBALI KE HALAMAN KATEGORI
+        function backToCategories() {
+            const viewFolders = document.getElementById('view-folders');
+            viewFolders.classList.add('opacity-0');
+            setTimeout(() => {
+                viewFolders.classList.add('hidden');
+                document.getElementById('view-categories').classList.remove('hidden');
+            }, 300);
+        }
+
+        // 🌟 DIUBAH: Warna tombol disesuaikan dengan kategorinya (Biru untuk MOOC 1, Indigo untuk MOOC 2, Teal untuk E-Learning)
+        function generateCard(item, categoryName) {
+            let btnColor = 'bg-blue-600 hover:bg-blue-700'; // Default (MOOC 1)
+            if (categoryName === 'mooc2') btnColor = 'bg-indigo-600 hover:bg-indigo-700';
+            if (categoryName === 'elearning') btnColor = 'bg-dark-teal hover:bg-dark-teal-light';
+
+            return `
+                <div class="border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all duration-300 flex flex-col h-full bg-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-gray-50 rounded-bl-full -z-0"></div>
+                    
+                    <div class="flex justify-between items-start mb-4 relative z-10">
+                        <div class="w-12 h-12 rounded-xl ${item.bgClass} flex items-center justify-center">
+                            <i class="${item.iconClass} text-xl"></i>
+                        </div>
+                        <span class="text-[10px] font-bold px-2.5 py-1 bg-gray-100 text-gray-600 rounded-md border border-gray-200">
+                            ${item.type}
+                        </span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-sm mb-2 leading-tight relative z-10">${item.title}</h4>
+                    
+                    <div class="flex items-center mt-1 mb-5 relative z-10">
+                        <i class="far fa-clock text-red-400 mr-1.5 text-xs"></i>
+                        <p class="text-xs text-red-500 font-medium">${item.deadline}</p>
+                    </div>
+
+                    <div class="mt-auto pt-4 border-t border-gray-100 relative z-10">
+                        <a href="${item.linkUpload}" target="_blank" class="w-full flex items-center justify-center gap-2 ${btnColor} text-white py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm">
+                            <i class="fas fa-cloud-upload-alt"></i> Upload Tugas
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // FUNGSI UNTUK PINDAH KE HALAMAN DAFTAR TUGAS
+        function openFolder(folderId, folderName) {
+            const viewFolders = document.getElementById('view-folders');
+            const viewFiles = document.getElementById('view-files');
+            const fileContainer = document.getElementById('dynamic-file-container');
+
+            document.getElementById('current-folder-title').textContent = folderName;
+            fileContainer.innerHTML = '';
+
+            const tugas = tugasData[currentCategory][folderId];
+
+            if (tugas && tugas.length > 0) {
+                
+                if (currentCategory === 'elearning' && folderId.startsWith('agenda')) {
+                    // LOGIKA E-LEARNING (Dipisah Individu & Kelompok)
+                    const tugasIndividu = tugas.filter(item => item.type === 'Individu');
+                    const tugasKelompok = tugas.filter(item => item.type.includes('Kelompok'));
+
+                    if (tugasIndividu.length > 0) {
+                        fileContainer.innerHTML += `
+                            <div class="col-span-full mb-1">
+                                <div class="flex items-center gap-3">
+                                    <h3 class="text-sm font-bold text-dark-teal bg-cyan-50 border border-cyan-100 px-4 py-2 rounded-lg shadow-sm">
+                                        <i class="fas fa-user text-cyan-600 mr-2"></i>Tugas Individu
+                                    </h3>
+                                    <div class="h-px bg-gray-200 flex-grow"></div>
+                                </div>
+                            </div>
+                        `;
+                        tugasIndividu.forEach(item => { fileContainer.innerHTML += generateCard(item, currentCategory); });
+                    }
+
+                    if (tugasKelompok.length > 0) {
+                        fileContainer.innerHTML += `
+                            <div class="col-span-full mt-8 mb-1">
+                                <div class="flex items-center gap-3">
+                                    <h3 class="text-sm font-bold text-dark-teal bg-cyan-50 border border-cyan-100 px-4 py-2 rounded-lg shadow-sm">
+                                        <i class="fas fa-users text-cyan-600 mr-2"></i>Tugas Kelompok
+                                    </h3>
+                                    <div class="h-px bg-gray-200 flex-grow"></div>
+                                </div>
+                            </div>
+                        `;
+                        tugasKelompok.forEach(item => { fileContainer.innerHTML += generateCard(item, currentCategory); });
+                    }
+                } else {
+                    // LOGIKA MOOC 1, MOOC 2 & AKTUALISASI (Ditampilkan Langsung)
+                    tugas.forEach(item => { fileContainer.innerHTML += generateCard(item, currentCategory); });
+                }
+
+            } else {
+                fileContainer.innerHTML = `
+                    <div class="col-span-full text-center text-gray-500 py-12 bg-gray-50 rounded-xl border border-dashed border-gray-200">
+                        <i class="fas fa-folder-open text-4xl mb-3 text-gray-300"></i>
+                        <p class="text-sm">Belum ada tugas di dalam agenda ini.</p>
+                    </div>
+                `;
+            }
+
+            viewFolders.classList.add('hidden');
+            setTimeout(() => {
+                viewFiles.classList.remove('hidden');
+                setTimeout(() => { viewFiles.classList.remove('opacity-0'); }, 50);
+            }, 100);
+        }
+
+        // FUNGSI KEMBALI KE HALAMAN FOLDER
+        function backToFolders() {
+            const viewFolders = document.getElementById('view-folders');
+            const viewFiles = document.getElementById('view-files');
+
+            viewFiles.classList.add('opacity-0');
+            setTimeout(() => {
+                viewFiles.classList.add('hidden');
+                viewFolders.classList.remove('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
